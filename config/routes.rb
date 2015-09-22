@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   resources :reservations
   resources :users
 
-  root :to => 'planes#index'
+  root :to => 'pages#home'
   
 end

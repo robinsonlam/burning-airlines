@@ -2,10 +2,16 @@ var app = app || {};
 
 app.AppRouter = Backbone.Router.extend({
 	routes: {
-		'': 'index'
+		'': 'index',
+		'flights/:origin/:destination': 'filteredFlightsView'
 	},
 
 	index: function() {
-		console.log("You are on the index page");
+		var appView = new app.AppView();
+		appView.render();
+	},
+
+	filteredFlightsView: function(origin, destination) {
+		
 	}
 });

@@ -8,8 +8,8 @@ Seat.destroy_all
 p1 = Plane.create({ name: 'T-bird', num_rows: 1, num_cols: 2  });
 p2 = Plane.create({ name: 'Fairey Swordfish', num_rows: 2, num_cols: 1 });
 
-f1 = Flight.create({ flight_number: '63', origin: 'Sydney', destination: 'Melbourne', date: '12/15/2015', time: '18:10:12' });
-f2 = Flight.create({ flight_number: '13', origin: 'Perth', destination: 'Sydney', date: '12/15/2015', time: '19:32:12' });
+f1 = Flight.create({ flight_number: '63', origin: 'Sydney', destination: 'Melbourne', date: '2015/12/15', time: '18:10:12' });
+f2 = Flight.create({ flight_number: '13', origin: 'Perth', destination: 'Sydney', date: '2015/12/15', time: '19:32:12' });
 
 u1 = User.create({ name: 'Aile', address: '32 Cute st, Cute Town, Cutecute, 2001, NSW', phone_number: '612 8923 7878', passport_number: 'M892 345' });
 u2 = User.create({ name: 'Rob', address: '2 Hot Lane, Sassy Town, Robsville, 2003, NSW', phone_number: '612 9999 6666', passport_number: 'M991 309' });
