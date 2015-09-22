@@ -8,6 +8,7 @@
 </head>
 <body>
 
+
 <nav>
 	<%= link_to 'Planes', planes_path %>
 	<%= link_to 'New Plane', new_plane_path %>
@@ -19,8 +20,9 @@
 	<%= link_to 'New User', new_user_path %>
 </nav> 
 
-	
-<%= yield %>
+<div class="container">	
+	<%= yield %>
+</div>
 
 </body>
 </html>

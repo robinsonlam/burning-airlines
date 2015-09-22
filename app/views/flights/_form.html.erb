@@ -31,10 +31,11 @@
     <%= f.label :time %><br>
     <%= f.time_select :time %>
   </div>
-  <div class="field">
-    <%= f.label :plane_id %><br>
-    <%= f.number_field :plane_id %>
-  </div>
+
+  <label>Plane</label>
+      <%= f.select :plane_id, Plane.all.map { |plane| [plane.name, plane.id] }, :include_blank => true, :placeholder => "Select the plane" %>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
