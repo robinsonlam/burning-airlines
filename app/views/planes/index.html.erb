@@ -8,7 +8,8 @@
       <th>Name</th>
       <th>Num rows</th>
       <th>Num cols</th>
-      <th>Seat number</th>
+      <th>Seats</th>
+      <th>Flight Number</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,6 +20,18 @@
         <td><%= plane.name %></td>
         <td><%= plane.num_rows %></td>
         <td><%= plane.num_cols %></td>
+        
+        <% plane.seats.each do |s| %>
+          <td><%= s.seat_number %></td></p>
+        <% end %>
+
+
+        <% plane.flights.each do |f| %>
+          <td><%= f.flight_number %></td>
+        <% end %>
+
+
+
         <td><%= link_to 'Show', plane %></td>
         <td><%= link_to 'Edit', edit_plane_path(plane) %></td>
         <td><%= link_to 'Destroy', plane, method: :delete, data: { confirm: 'Are you sure?' } %></td>

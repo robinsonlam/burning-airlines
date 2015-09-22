@@ -42,6 +42,11 @@ ActiveRecord::Schema.define(version: 20150922045115) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "reservations_users", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "reservation_id"
+  end
+
   create_table "seats", force: :cascade do |t|
     t.string   "seat_number"
     t.integer  "plane_id"
@@ -58,11 +63,6 @@ ActiveRecord::Schema.define(version: 20150922045115) do
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
     t.boolean  "admin",           default: false
-  end
-
-  create_table "users_reservations", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "reservation_id"
   end
 
 end
