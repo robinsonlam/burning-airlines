@@ -8,7 +8,6 @@
 #  num_cols   :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  seats      :integer
 #
 
 class Plane < ActiveRecord::Base
