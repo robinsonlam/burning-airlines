@@ -17,7 +17,9 @@
 
 <p>
   <strong>Seat number:</strong>
-  <%= @plane.seat_number %>
+  <% @plane.seats.each do |seat| %>
+  	<%= seat.seat_number %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_plane_path(@plane) %> |
