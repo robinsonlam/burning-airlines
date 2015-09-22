@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  # before_action :check_if_logged_in, :only => [:edit, :update]
+  # before_action :check_if_correct_user, :only => [:show]
+  # before_action :check_if_admin, :only => [:index]
+
+
   # GET /users
   # GET /users.json
   def index
@@ -14,17 +19,28 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
+    redirect_to root_path if @current_user.present?
     @user = User.new
   end
 
   # GET /users/1/edit
   def edit
+    @user = @current_user
   end
 
   # POST /users
   # POST /users.json
   def create
     @user = User.new(user_params)
+
+    # if @user.save
+    #   session[:user_id] = @user.id
+    #   redirect_to root_path
+    # else
+    #   render :new
+    # end
+
+
 
     respond_to do |format|
       if @user.save
@@ -69,6 +85,11 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :address, :phone_number, :passport_number)
+      params.require(:user).permit(:name, :address, :phone_number, :passport_number, :email, :password, :password_confirmation)
+    end
+
+    def check_if_correct_user
+      user = User.find_by :id => params[:id]
+      redirect_to root_path unless @current_user.present? && (@current_user.id == user.id || @current_user.admin?)
     end
 end
