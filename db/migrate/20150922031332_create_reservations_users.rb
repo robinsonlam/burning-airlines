@@ -1,4 +1,4 @@
-class CreateUsersReservations < ActiveRecord::Migration
+class CreateReservationsUsers < ActiveRecord::Migration
   def change
     create_table :users_reservations do |t|
       t.integer :user_id
