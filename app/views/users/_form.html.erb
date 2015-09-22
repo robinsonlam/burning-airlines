@@ -27,6 +27,23 @@
     <%= f.label :passport_number %><br>
     <%= f.text_field :passport_number %>
   </div>
+
+
+    <p>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+    </p>
+
+    <p>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </p>
+
+    <p>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %>
+    </p>
+
   <div class="actions">
     <%= f.submit :class => 'main-button' %>
   </div>
