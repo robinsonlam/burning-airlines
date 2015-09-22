@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   resources :planes
   resources :reservations
   resources :users
+
+  root :to => 'planes#index'
   
 end
