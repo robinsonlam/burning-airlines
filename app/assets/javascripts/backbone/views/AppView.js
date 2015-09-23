@@ -9,8 +9,5 @@ app.AppView = Backbone.View.extend({
 
 		var searchView = new app.SearchView();
 		searchView.render();
-
-		var resultsView = new app.ResultsView({ collection: app.flights });
-		resultsView.render();
 	}
 });

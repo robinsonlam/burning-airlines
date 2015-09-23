@@ -17,7 +17,12 @@ app.SearchView = Backbone.View.extend({
 	},
 
 	createSearch: function() {
-		console.log('Creating Search');
+		var origin = this.$el.find('#originSearch').val();
+		var destination = this.$el.find('#destinationSearch').val();
+
+		app.filteredFlights = app.flights.where({ origin: origin, destination: destination });
+		var resultsView = new app.ResultsView({ collection: app.filteredFlights });
+		resultsView.render();
 	},
 
 	checkForEnter: function() {

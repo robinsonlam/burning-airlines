@@ -8,7 +8,7 @@ $(document).ready(function() {
 	app.flights = new app.Flights();
 	app.flights.fetch();
 
-	// app.filteredFlights = app.flights.where({ origin: 'Sydney', destination: 'Melbourne' }); // FOR SEARCH
+	app.filteredFlights = new app.FilteredFlights();
 
 	app.router = new app.AppRouter();
 	Backbone.history.start();
