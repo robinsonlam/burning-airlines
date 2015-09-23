@@ -7,7 +7,7 @@ app.SearchView = Backbone.View.extend({
 
 	events: {
 		'click button': 'createSearch',
-		'keydown textarea': 'checkForEnter'
+		'keydown input': 'checkForEnter'
 	},
 
 	render: function() {
