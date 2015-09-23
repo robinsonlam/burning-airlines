@@ -34,7 +34,9 @@
   <strong>Available seats:</strong>
 
   <% @flight.plane.seats.each do |seat| %>
-    <div class="seat <%= seat.available_class(seat) %>"> Seat </div>
+    <% if seat.available %>
+    <%= link_to 'Seat', nil, :class => "seat #{ seat.available_class(seat) }" %>
+    <% end %>
   <% end %>
 
 </p>
