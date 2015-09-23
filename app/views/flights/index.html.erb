@@ -11,6 +11,7 @@
       <th>Date</th>
       <th>Time</th>
       <th>Plane</th>
+      <th>Total number of seats</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,6 +25,11 @@
         <td><%= flight.date %></td>
         <td><%= flight.time %></td>
         <td><%= flight.plane_id %></td>
+
+        <% num_rows = flight.plane.num_rows.to_i %>
+        <% num_cols = flight.plane.num_cols.to_i %>
+        <td><%= num_rows*num_cols %></td>
+
         <td><%= link_to 'Show', flight %></td>
         <td><%= link_to 'Edit', edit_flight_path(flight) %></td>
         <td><%= link_to 'Destroy', flight, method: :delete, data: { confirm: 'Are you sure?' } %></td>

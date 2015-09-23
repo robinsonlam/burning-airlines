@@ -9,7 +9,6 @@
 <body>
 
 	<nav>
-
 		<% if @current_user.present? %>
 			
 			<%= link_to 'Edit profile', edit_user_path(@current_user) %>
@@ -17,7 +16,8 @@
 			<%= link_to 'Flights', flights_path %>
 			<%= link_to 'Search', root_path %>
 
-			<% if @current_user.admin? %>
+			
+
 					<%= link_to 'Planes', planes_path %>
 					<%= link_to 'New Plane', new_plane_path %>
 					<%= link_to 'New Flight', new_flight_path %>
@@ -25,7 +25,8 @@
 
 					<%= link_to 'Reservations', reservations_path %>
 					<%= link_to 'New Reservations', new_reservation_path %>
-			<% end %>
+
+			
 
 		<% else %>
 			<%= link_to "Log In", login_path %>

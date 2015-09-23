@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   delete '/login' => 'session#destroy', :as => 'logout' # Logs out
 
   root :to => 'pages#search'
+  get '/result' => 'pages#result'
+
 end
