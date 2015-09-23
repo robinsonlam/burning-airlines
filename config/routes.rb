@@ -14,5 +14,6 @@ Rails.application.routes.draw do
 
   get '/result' => 'pages#result'
 
-  root :to => 'pages#home'
+  # root :to => 'pages#home'
+  root :to => 'pages#search'
 end

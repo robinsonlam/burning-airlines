@@ -33,13 +33,10 @@
 <p>
   <strong>Available seats:</strong>
 
-  <% @num_rows.times do |i| %>
-    <% @num_cols.times do |j| %>
-
-      <div class="seat #{ seat.class_for_available(seat) }">Seat</div>
-    <% end %>
-    </br>
+  <% @flight.plane.seats.each do |seat| %>
+    <div class="seat <%= seat.available_class(seat) %>"> Seat </div>
   <% end %>
+
 </p>
 
 <%= link_to 'Edit', edit_flight_path(@flight) %> |

@@ -5,4 +5,16 @@
 .seat {
 	display: inline-block;
 	border: 1px solid black;
+	padding: 15px 5px;
+	&.available {
+		background: green;
+		color: white;
+		
+		cursor: pointer;
+	}
+
+	&.taken {
+		background: red;
+		color: white;
+	}
 }
