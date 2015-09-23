@@ -22,6 +22,7 @@ app.SearchView = Backbone.View.extend({
 
 		var filteredFlights = app.flights.where({ origin: origin, destination: destination });
 		if ( filteredFlights.length > 0 ) {
+			$('#resultsTable').empty();	
 			app.filteredFlights.reset();
 			filteredFlights.forEach(function(flight) {
 				app.filteredFlights.add(flight);
