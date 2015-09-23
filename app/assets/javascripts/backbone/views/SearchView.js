@@ -20,9 +20,17 @@ app.SearchView = Backbone.View.extend({
 		var origin = this.$el.find('#originSearch').val();
 		var destination = this.$el.find('#destinationSearch').val();
 
-		app.filteredFlights = app.flights.where({ origin: origin, destination: destination });
-		var resultsView = new app.ResultsView({ collection: app.filteredFlights });
-		resultsView.render();
+		var filteredFlights = app.flights.where({ origin: origin, destination: destination });
+		if( filteredFlights.length > 0 ) {
+			app.filteredFlights.reset();
+			debugger;
+			filteredFlights.forEach(function(flight) {
+				app.filteredFlights.add(flight);
+			});
+
+			var resultsView = new app.ResultsView({ collection: app.filteredFlights });
+			resultsView.render();
+		};
 	},
 
 	checkForEnter: function() {

@@ -12,7 +12,7 @@ app.FlightView = Backbone.View.extend({
 		$row.find('.flight-destination').text( this.model.get('destination') );
 		$row.find('.flight-date').text( this.model.get('date') );
 		$row.find('.flight-time').text( this.model.get('time') );
-
+	
 		this.$el.prepend($row);
 	}
 });
