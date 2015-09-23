@@ -5,6 +5,8 @@ $(document).ready(function() {
 		$(this).removeClass('available');
 		$(this).addClass('taken');
 
+		
 
-	})
+
+	});
 });

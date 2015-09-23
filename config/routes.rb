@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   delete '/login' => 'session#destroy', :as => 'logout' # Logs out
 
   get '/result' => 'pages#result'
+  get '/booking/:id' => 'pages#booking', :as => 'booking'
 
-  # root :to => 'pages#home'
-  root :to => 'pages#search'
+  root :to => 'pages#home'
+  # root :to => 'pages#search'
 end

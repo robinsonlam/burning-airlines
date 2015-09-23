@@ -35,7 +35,7 @@
 
   <% @flight.plane.seats.each do |seat| %>
     <% if seat.available %>
-    <%= link_to 'Seat', nil, :class => "seat #{ seat.available_class(seat) }" %>
+    <%= link_to 'Seat', booking_path(@flight), :class => "seat #{ seat.available_class(seat) }" %>
     <% end %>
   <% end %>
 
