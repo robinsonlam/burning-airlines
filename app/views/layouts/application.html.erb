@@ -8,6 +8,7 @@
 </head>
 <body>
 
+<div class="container">
 	<nav class="global-nav">
 		<% if @current_user.present? %>
 			
@@ -30,9 +31,8 @@
 			<%= link_to "Log In", login_path %>
 			<%= link_to 'New User', new_user_path %>
 		<% end %>
-	</nav> 
-
-	<div class="container">	
+	</nav>
+	
 		<%= yield %>
 	</div>
 
