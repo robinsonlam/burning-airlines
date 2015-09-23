@@ -1,3 +1,47 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#searchForm {
+	.searchContainer {
+		display: inline-block;
+		margin: 20px 20px 0 0;
+	}
+	input {
+		border: 1px solid #ccc;
+		padding: 20px;
+		outline: none;
+		margin-bottom: 20px;
+	}
+}
+
+#resultsTable {
+	margin: 40px 0;
+	table {
+		border: 1px solid lighten(#3cbc8d, 40%);
+		border-spacing: 0;
+		thead {
+			background: #3cbc8d;
+			color: white;
+		}
+
+		td {
+			border: none;
+			padding: 10px;
+			min-width: 100px;
+		}
+		
+		tbody {
+			tr {
+				background: white;
+				td {
+					border: 1px solid lighten(#3cbc8d, 40%);
+				}
+
+				&:nth-child(even) {
+					background: lighten(#3cbc8d, 40%);
+				}
+			}
+		}
+	}
+}
