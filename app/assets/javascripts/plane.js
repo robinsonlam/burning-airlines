@@ -37,8 +37,7 @@ var displayTable = function() {
 
 	for (var i = 0; i < cell.length; i++) {
 		console.log(cell[i].innerHTML);
-		// var seat = document.getElementById('displaySeats');
-		// seat.innerHTML = cell[i].innerHTML;
+
 	}
 };
 
