@@ -1,9 +1,4 @@
-// Place all the styles related to the Flights controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
 
 .new-user-form {
 
@@ -40,3 +35,24 @@
 		padding: 10px 20px;
 	}
 }
+
+
+.seat {
+	display: inline-block;
+	border: 1px solid black;
+	padding: 15px 5px;
+	&.available {
+		background: green;
+		color: white;
+		
+		cursor: pointer;
+	}
+
+	&.taken {
+		background: red;
+		color: white;
+	}
+}
+
+
+

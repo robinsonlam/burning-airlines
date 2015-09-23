@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
 	before_action :fetch_current_user
 
+	
+
 	private
 	def fetch_current_user
 		if session[:user_id].present?

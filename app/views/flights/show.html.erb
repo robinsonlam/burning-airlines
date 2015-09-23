@@ -30,5 +30,23 @@
   <%= @flight.plane_id %>
 </p>
 
+<p>
+  <strong>Available seats:</strong>
+
+  <% @flight.plane.seats.each do |seat| %>
+    <% if seat.available %>
+    <%= link_to 'Seat', booking_path(@flight), :class => "seat #{ seat.available_class(seat) }" %>
+    <% end %>
+  <% end %>
+
+</p>
+
 <%= link_to 'Edit', edit_flight_path(@flight) %> |
 <%= link_to 'Back', flights_path %>
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+
+<h2>Avaible Flights</h2>
+
+<% @flights.each do |f|  %>
+	<p>
+		<% if @origin == f.origin %>
+			<% if @destination == f.destination %>
+				Flight ID: <%= link_to f.id, flight_path(f) %>
+				Flight Number: <%= f.flight_number %>
+				Origin: <%= f.origin %>
+				Destination: <%= f.destination %>
+				Date: <%= f.date %>
+				Time: <%= f.time %>
+			<% end %>
+		<% end %>
+	</p>
+<% end %>

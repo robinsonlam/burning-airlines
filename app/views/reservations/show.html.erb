@@ -1,13 +1,35 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Flight:</strong>
+	<strong>Plane ID:</strong>
+	<%= @reservation.flight.plane_id %>
+</p>
+
+<p>
+  <strong>Flight ID:</strong>
   <%= @reservation.flight_id %>
 </p>
 
 <p>
-  <strong>User:</strong>
+	<strong>Flight Number:</strong>
+	<%= @reservation.flight.flight_number %>
+</p>
+
+<p>
+  <strong>User ID:</strong>
   <%= @reservation.user_id %>
+</p>
+
+<p>
+	<strong>User Name:</strong>
+	<%= @reservation.user.name %>
+</p>
+
+<p>
+	<strong>Total number of seats:</strong>
+	<% num_rows = @reservation.flight.plane.num_rows.to_i %>
+	<% num_cols = @reservation.flight.plane.num_cols.to_i %>
+	<%= num_rows * num_cols %>
 </p>
 
 <%= link_to 'Edit', edit_reservation_path(@reservation) %> |

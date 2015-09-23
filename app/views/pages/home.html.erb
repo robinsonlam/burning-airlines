@@ -1,0 +1,38 @@
+<div id="main"></div>
+
+<script id="appViewTemplate" type="template/underscore">
+	<div id="searchForm">Search Bar here</div>
+	<div id="resultsTable"></div>
+</script>
+
+<script id="searchViewTemplate" type="template/underscore">
+	<label for="originSearch">Origin:</label>
+	<input type="text" id="originSearch" placeholder="Origin"></input>
+	<label for="destinationSearch">Destination:</label>
+	<input type="text" id="destinationSearch" placeholder="Destination"></input>
+	<button>Search Flights</button>
+</script>
+
+<script id="resultsTemplate" type="template/underscore">
+	<table id="resultsTable">
+		<thead>
+			<td>Flight Number</td>
+			<td>Origin</td>
+			<td>Destination</td>
+			<td>Flight Date</td>
+			<td>Flight Time</td>
+		</thead>
+		<tbody id="flights">
+		</tbody>
+	</table>
+</script>
+
+<script id="flightTemplate" type="template/underscore">
+	<tr class="flight">
+		<td class="flight-number"></td>
+		<td class="flight-origin"></td>
+		<td class="flight-destination"></td>
+		<td class="flight-date"></td>
+		<td class="flight-time"></td>
+	</tr>
+</script>

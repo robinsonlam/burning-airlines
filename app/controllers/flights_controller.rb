@@ -10,6 +10,9 @@ class FlightsController < ApplicationController
   # GET /flights/1
   # GET /flights/1.json
   def show
+    @flight = Flight.find params[:id]
+    @num_rows = (Plane.find @flight.plane_id).num_rows
+    @num_cols = (Plane.find @flight.plane_id).num_cols
   end
 
   # GET /flights/new

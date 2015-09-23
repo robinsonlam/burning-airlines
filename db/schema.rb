@@ -50,9 +50,9 @@ ActiveRecord::Schema.define(version: 20150922071751) do
   create_table "seats", force: :cascade do |t|
     t.string   "seat_number"
     t.integer  "plane_id"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.boolean  "available",   default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "available",   default: true
   end
 
   create_table "users", force: :cascade do |t|

@@ -11,14 +11,24 @@
     </div>
   <% end %>
 
+   <div class="field">
+      <label>Flight Number</label>
+      <%= f.select :flight_id, Flight.all.map { |flight| [flight.flight_number, flight.id] }, :include_blank => true, :placeholder => "Select the flight number" %>
+    </div>
+  
   <div class="field">
-    <%= f.label :flight_id %><br>
-    <%= f.number_field :flight_id %>
+    <label>User Name</label>
+    <%= f.select :user_id, User.all.map { |user| [user.name, user.id] }, :include_blank => true, :placeholder => "Select the user name" %>
   </div>
+
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
+    <label>Seats</label>
+    <div id="displaySeats"></div>
+    <!-- <%= f.select :user_id, User.all.map { |user| [user.name, user.id] }, :include_blank => true %> -->
+  </div>  
+
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
