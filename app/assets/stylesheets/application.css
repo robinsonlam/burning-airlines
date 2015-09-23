@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+body {
+	font-family: "Proxima-Nova", "Helvetica Neue", sans-serif;
+}
+
+.container {
+	width: 800px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.global-nav {
+	text-align: right;
+	padding: 20px 0;
+	a {
+		margin-left: 20px;
+		padding: 10px;
+	}
+}

@@ -8,3 +8,4 @@ class PagesController < ApplicationController
 		@destination = params[:destination]
 	end
 end
+
