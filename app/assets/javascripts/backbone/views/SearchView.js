@@ -21,16 +21,18 @@ app.SearchView = Backbone.View.extend({
 		var destination = this.$el.find('#destinationSearch').val();
 
 		var filteredFlights = app.flights.where({ origin: origin, destination: destination });
-		if( filteredFlights.length > 0 ) {
+		if ( filteredFlights.length > 0 ) {
 			app.filteredFlights.reset();
-			debugger;
 			filteredFlights.forEach(function(flight) {
 				app.filteredFlights.add(flight);
 			});
 
 			var resultsView = new app.ResultsView({ collection: app.filteredFlights });
 			resultsView.render();
-		};
+		} else {
+			$('#resultsTable').empty();	
+			$('#resultsTable').text("No results found.");
+		}
 	},
 
 	checkForEnter: function() {
