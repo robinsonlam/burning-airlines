@@ -1,8 +1,58 @@
-// Place all the styles related to the Flights controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.new-user-form {
+
+	form {
+	margin: auto 0;
+	}
+
+	label {
+		font-weight: 800;
+		display: block;
+	}
+
+	.main-button {
+		padding: 10px 20px;
+		min-width: 150px;
+		background: #3cbc8d;
+		color: white;
+		border-radius: 10px;
+	}
+
+	input[type='text'], input[type='password'], input[type='email'], textarea {
+		margin-top: 20px;
+		border: none;
+		border-bottom: 1px solid gray;
+		width: 200px;
+		padding: 10px;
+	}
+	input:focus {
+		outline: none;
+	}
+
+	input[type='submit'] {
+		min-width: 150px;
+		padding: 10px 20px;
+	}
+}
+
 
 .seat {
 	display: inline-block;
 	border: 1px solid black;
+	padding: 15px 5px;
+	&.available {
+		background: green;
+		color: white;
+		
+		cursor: pointer;
+	}
+
+	&.taken {
+		background: red;
+		color: white;
+	}
 }
+
+
+

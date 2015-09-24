@@ -12,4 +12,12 @@
 
 class Seat < ActiveRecord::Base
 	belongs_to :plane
+
+	def available_class(seat)
+		if seat.available
+			'available'
+		else
+			'taken'
+		end
+	end
 end

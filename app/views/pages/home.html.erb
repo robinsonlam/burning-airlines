@@ -6,10 +6,14 @@
 </script>
 
 <script id="searchViewTemplate" type="template/underscore">
-	<label for="originSearch">Origin:</label>
-	<input type="text" id="originSearch" placeholder="Origin"></input>
-	<label for="destinationSearch">Destination:</label>
-	<input type="text" id="destinationSearch" placeholder="Destination"></input>
+	<div class="searchContainer">
+		<label for="originSearch">Origin:</label>
+		<input type="text" id="originSearch" placeholder="Origin"></input>
+	</div>
+	<div class="searchContainer">
+		<label for="destinationSearch">Destination:</label>
+		<input type="text" id="destinationSearch" placeholder="Destination"></input>
+	</div>
 	<button>Search Flights</button>
 </script>
 
@@ -35,4 +39,23 @@
 		<td class="flight-date"></td>
 		<td class="flight-time"></td>
 	</tr>
+</script>
+
+<script id="flightInfoTemplate" type="template/undescore">
+	<div id="flightInfo">
+		<h2>Flight Number</h2>
+		<p class="flight-number"></p>
+
+		<h2>Origin</h2>
+		<p class="flight-origin"></p>
+
+		<h2>Destination</h2>
+		<p class="flight-destination"></p>
+
+		<h2>Flight Date</h2>
+		<p class="flight-date"></p>
+
+		<h2>Flight Time</h2>
+		<p class="flight-time"></p>
+	</div>
 </script>

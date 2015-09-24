@@ -38,8 +38,13 @@
 
       
       <div class="seat">Seat</div>
+      <% @flight.plane.seats.each do |seat| %>
+        <% if seat.available %>
+          <%= link_to 'Seat', booking_path(@flight), :class => "seat #{ seat.available_class(seat) }" %>
+        <% end %>
+      <% end %>
+
     <% end %>
-    </br>
   <% end %>
 </p>
 

@@ -27,10 +27,15 @@ class PlanesController < ApplicationController
   def create
     @plane = Plane.new(plane_params)
 
-    
+    columns = params[:plane][:num_cols].to_i
+    rows = params[:plane][:num_rows].to_i
+    totalSeats = columns * rows
 
     respond_to do |format|
       if @plane.save
+        totalSeats.times do |seat|
+          Seat.create({ :seat_number => seat, :plane_id => @plane.id })
+        end
         format.html { redirect_to @plane, notice: 'Plane was successfully created.' }
         format.json { render :show, status: :created, location: @plane }
       else
@@ -72,6 +77,6 @@ class PlanesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def plane_params
-      params.require(:plane).permit(:name, :num_rows, :num_cols, :seat_number)
+      params.require(:plane).permit(:id, :name, :num_rows, :num_cols, :seat_number)
     end
 end

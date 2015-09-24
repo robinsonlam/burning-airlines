@@ -14,7 +14,8 @@
  *= require_self
  */
 body {
-	font-family: "Proxima-Nova", "Helvetica Neue", sans-serif;
+	font-family: "Museo Sans", "Helvetica Neue", sans-serif;
+
 }
 
 .container {
@@ -23,11 +24,65 @@ body {
 	padding: 0;
 }
 
+.home-container {
+	margin: 20% auto;
+	text-align: center;
+}
+
+a {
+	font-size: 18px;
+	text-decoration: none;
+	color: gray;
+	transition: color 0.2s ease-in-out;
+	padding: 10px;
+}
+
+a:hover {
+	color: #3cbc8d;
+	background: white;
+
+}
 .global-nav {
 	text-align: right;
 	padding: 20px 0;
 	a {
 		margin-left: 20px;
-		padding: 10px;
+		padding: 0 20px;
 	}
+}
+
+input[type="submit"], button {
+	font-size: 14px;
+	padding: 10px 20px;
+	min-width: 150px;
+	transition: all 0.3s ease-in-out;
+	color: white;
+	background: #3cbc8d;
+	border: 1px solid #3cbc8d;
+	display: block;
+}
+
+input[type="submit"]:hover, button:hover {
+	color: #3cbc8d;
+	background: white;
+	border: 1px solid #3cbc8d;
+}
+
+
+
+label {
+	font-weight: 800;
+	display: block;
+	padding-top: 0px;
+	padding-bottom: 0;
+
+}
+
+input[type='text'], input[type='password'] {
+	background: white;
+	margin: 5px auto;
+	border: none;
+	border: 1px inset gray;
+	width: 200px;
+	padding: 10px;
 }
